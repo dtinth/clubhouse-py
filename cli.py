@@ -245,6 +245,7 @@ def chat_main(client):
                 str(user['is_speaker']),
                 str(user['is_moderator']),
             )
+        for user in users:
             # Check if the user is the speaker
             if user['user_id'] == int(user_id):
                 channel_speaker_permission = bool(user['is_speaker'])
